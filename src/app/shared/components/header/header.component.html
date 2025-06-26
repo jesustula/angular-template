@@ -1,0 +1,28 @@
+<header class="sticky top-0 z-40 w-full bg-axolotl-500 text-white shadow-md px-6 py-3 flex items-center justify-between">
+
+  <!-- Brand -->
+  <div class="flex items-center space-x-6">
+    <button
+      *ngIf="isSidebarCollapsed"
+      (click)="onToggle()"
+      class="text-white hover:scale-110 transition-transform duration-200 cursor-pointer"
+    >
+      ☰
+    </button>
+
+    <!-- Logo y nombre -->
+    <img src="assets/logo.svg" alt="Logo" class="h-8 w-8" />
+    <span class="text-xl font-bold tracking-wide">Book Tracker</span>
+  </div>
+
+  <!-- Right-side content -->
+  <div class="flex items-center space-x-4">
+    <!-- Placeholder for future actions -->
+    <button class="hover:bg-white hover:text-axolotl-300 px-3 py-1 rounded transition-colors">
+      🔔
+    </button>
+    <button class="hover:bg-white hover:text-axolotl-300 px-3 py-1 rounded transition-colors">
+      🚪
+    </button>
+  </div>
+</header>

@@ -1,0 +1,41 @@
+<!-- Sidebar container -->
+<div class="relative">
+  <!-- Sidebar -->
+  <div [ngClass]="{
+    'translate-x-0': !isCollapsed,
+    '-translate-x-full': isCollapsed
+  }"
+    class="fixed top-0 left-0 z-50 w-64 h-full bg-axolotl-500 text-white p-4 transform transition-transform duration-300 ease-in-out">
+    <!-- Toggle Button -->
+    <button (click)="onToggle()"
+      class="absolute top-4 right-4 text-white hover:scale-110 transition-transform duration-200 cursor-pointer">
+      ✖️
+    </button>
+
+    <!-- Avatar -->
+    <div class="flex flex-col items-center mb-6 mt-10">
+      <img src="https://i.pravatar.cc/100" alt="Avatar"
+        class="rounded-full w-16 h-16 border-2 border-axolotl-300 mb-2" />
+      <span class="text-sm font-semibold text-center">Juan Pérez</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="flex flex-col space-y-3">
+      <a routerLink="/dashboard" routerLinkActive="bg-white text-axolotl-600"
+        class="rounded px-3 py-2 hover:bg-white hover:text-axolotl-600 transition-colors">
+        📚 Dashboard
+      </a>
+      <a routerLink="/books" routerLinkActive="bg-white text-[#6B8E23]"
+        class="rounded px-3 py-2 hover:bg-white hover:text-axolotl-600 transition-colors">
+        📖 Mis Libros
+      </a>
+      <a routerLink="/categories" routerLinkActive="bg-white text-[#6B8E23]"
+        class="rounded px-3 py-2 hover:bg-white hover:text-axolotl-600 transition-colors">
+        📂 Categorías
+      </a>
+    </nav>
+  </div>
+
+  <!-- Toggle Button when sidebar is hidden -->
+
+</div>

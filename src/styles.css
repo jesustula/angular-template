@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@theme {
+
+    --color-axolotl-50: #f5f8f5;
+    --color-axolotl-100: #e8f0e8;
+    --color-axolotl-200: #d2e0d2;
+    --color-axolotl-300: #aec7af;
+    --color-axolotl-400: #83a584;
+    --color-axolotl-500: #608761;
+    --color-axolotl-600: #49694a;
+    --color-axolotl-700: #3e573f;
+    --color-axolotl-800: #344735;
+    --color-axolotl-900: #2c3b2d;
+    --color-axolotl-950: #151e16;
+
+
+}
