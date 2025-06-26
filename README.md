@@ -1,6 +1,6 @@
 # Angular Template Project
 
-This is a starter Angular template project featuring Tailwind CSS for styling. It includes initial components and pages such as:
+This is a starter Angular 19 template project featuring Tailwind CSS 4 for styling. It includes initial components and pages such as:
 
 - **Login Page**
 - **Signup Page**
@@ -14,6 +14,25 @@ This is a starter Angular template project featuring Tailwind CSS for styling. I
 - Tailwind 4 CSS integration
 - Modular structure for easy scalability
 - Ready-to-use authentication and navigation components
+
+🫶🏾 Sponsor this project
+-----------------------
+
+Building and maintaining open-source software takes time, energy, and coffee ☕.
+
+If this template saved you even 10 minutes of development, or helped you ship faster — **consider donating just $1** to support its ongoing improvement.
+
+> 💡 _"If every developer who used this component bought me a coffee, I could dedicate more time to fixing bugs, adding features, and making it even better for you and others."_
+
+Your support — even small — makes a big difference.
+
+[![Sponsor](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/jesustula)
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/jesustg93)
+
+> It takes less than 30 seconds, and just $1 says: “Hey, this helped me — keep going.”
+---
+
+Thank u!
 
 ## Getting Started
 
