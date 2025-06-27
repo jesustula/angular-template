@@ -4,9 +4,13 @@ This is a starter Angular 19 template project featuring Tailwind CSS 4 for styli
 
 - **Login Page**
 - **Signup Page**
-- **Books (Home) Page**
+- **Dashboard (Home) Page**
 - **Sidebar Navigation**
 - **Header Component**
+- **Page 404**
+- **Guard Routes**
+- **Local Storage Token and Sesion**
+
 
 ## Features
 
