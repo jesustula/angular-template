@@ -14,9 +14,9 @@
 
     <!-- Avatar -->
     <div class="flex flex-col items-center mb-6 mt-10">
-      <img src="https://i.pravatar.cc/100" alt="Avatar"
+      <img src="/assets/img/user-default.jpg" alt="Avatar"
         class="rounded-full w-16 h-16 border-2 border-axolotl-300 mb-2" />
-      <span class="text-sm font-semibold text-center">Juan Pérez</span>
+      <span class="text-sm font-semibold text-center"> {{ (user$ | async)?.name }}</span>
     </div>
 
     <!-- Navigation -->

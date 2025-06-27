@@ -2,16 +2,18 @@ import { Routes } from '@angular/router';
 import { AuthGuard } from './core/guards/auth.guard';
 
 export const routes: Routes = [
+  // Rutas protegidas (con layout principal)
   {
     path: '',
     canActivate: [AuthGuard],
     loadComponent: () =>
       import('./layouts/main-layout/main-layout.component').then(m => m.MainLayoutComponent),
     children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       {
-        path: '',
-        redirectTo: 'books',
-        pathMatch: 'full',
+        path: 'dashboard',
+        loadComponent: () =>
+          import('./features/dashboard/dashboard.component').then(m => m.DashboardComponent),
       },
       {
         path: 'books',
@@ -20,8 +22,10 @@ export const routes: Routes = [
       },
     ],
   },
+
+  // Rutas públicas (login/signup)
   {
-    path: '',
+    path: 'auth',
     loadComponent: () =>
       import('./layouts/auth-layout/auth-layout.component').then(m => m.AuthLayoutComponent),
     children: [
@@ -35,10 +39,13 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./features/auth/signup/signup.component').then(m => m.SignupComponent),
       },
-      {
-        path: '**',
-        redirectTo: 'login',
-      },
     ],
+  },
+
+  // Página 404 (ruta comodín al final)
+  {
+    path: '**',
+    loadComponent: () =>
+      import('./shared/pages/not-found.component').then(m => m.NotFoundComponent),
   },
 ];

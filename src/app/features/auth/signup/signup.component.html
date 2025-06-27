@@ -18,6 +18,32 @@
         </div>
       </div>
       <div class="mb-4">
+        <label for="last_name" class="block text-axolotl-800 font-medium mb-2">Last Name</label>
+        <input
+          id="last_name"
+          type="text"
+          formControlName="last_name"
+          class="w-full px-4 py-2 border border-axolotl-300 rounded focus:outline-none focus:ring-2 focus:ring-axolotl-500"
+          placeholder="Your last name"
+          autocomplete="family-name"
+          required
+        />
+        <div *ngIf="signupForm.get('last_name')?.invalid && signupForm.get('last_name')?.touched" class="text-red-500 text-sm mt-1">
+          Last name is required.
+        </div>
+      </div>
+      <div class="mb-4">
+        <label for="second_last_name" class="block text-axolotl-800 font-medium mb-2">Second Last Name</label>
+        <input
+          id="second_last_name"
+          type="text"
+          formControlName="second_last_name"
+          class="w-full px-4 py-2 border border-axolotl-300 rounded focus:outline-none focus:ring-2 focus:ring-axolotl-500"
+          placeholder="Your second last name"
+          autocomplete="additional-name"
+        />
+      </div>
+      <div class="mb-4">
         <label for="email" class="block text-axolotl-800 font-medium mb-2">Email</label>
         <input
           id="email"
@@ -45,6 +71,24 @@
         />
         <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched" class="text-red-500 text-sm mt-1">
           Password is required (min 6 characters).
+        </div>
+      </div>
+      <div class="mb-6">
+        <label for="confirmPassword" class="block text-axolotl-800 font-medium mb-2">Confirm Password</label>
+        <input
+          id="confirmPassword"
+          type="password"
+          formControlName="confirmPassword"
+          class="w-full px-4 py-2 border border-axolotl-300 rounded focus:outline-none focus:ring-2 focus:ring-axolotl-500"
+          placeholder="Confirm your password"
+          autocomplete="new-password"
+          required
+        />
+        <div *ngIf="signupForm.get('confirmPassword')?.invalid && signupForm.get('confirmPassword')?.touched" class="text-red-500 text-sm mt-1">
+          Please confirm your password.
+        </div>
+        <div *ngIf="errorMessage" class="text-red-500 text-sm mt-1">
+          {{ errorMessage }}
         </div>
       </div>
       <button
